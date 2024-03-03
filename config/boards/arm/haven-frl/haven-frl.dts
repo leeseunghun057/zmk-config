@@ -1,0 +1,156 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/dts-v1/;
+#include <nordic/nrf52840_qiaa.dtsi>
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+	model = "haven-frl";
+	compatible = "haven-frl";
+
+	chosen {
+		zephyr,code-partition = &code_partition;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zmk,battery = &fuelgauge;
+		zmk,kscan = &kscan0;
+		zmk,matrix_transform = &default_transform;
+		/* zephyr,console = &cdc_acm_uart; */
+	};
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <21>;
+        rows = <5>;
+        map = <
+            RC(0,0) RC(1,0) RC(2,0) RC(3,0) RC(4,0) RC(5,0) RC(6,0) RC(7,0) RC(8,0) RC(9,0) RC(10,0) RC(11,0) RC(12,0) RC(13,0) RC(14,0) RC(15,0) RC(16,0) RC(17,0) RC(18,0) RC(19,0) RC(20,0) RC(21,0)
+            RC(0,1) RC(1,1) RC(2,1) RC(3,1) RC(4,1) RC(5,1) RC(6,1) RC(7,1) RC(8,1) RC(9,1) RC(10,1) RC(11,1) RC(12,1) RC(13,1) RC(14,1) RC(15,1) RC(16,1) RC(17,1) RC(18,1) RC(19,1) RC(20,1) RC(21,1)
+                    RC(1,2) RC(2,2) RC(3,2) RC(4,2) RC(5,2) RC(6,2) RC(7,2) RC(8,2) RC(9,2) RC(10,2) RC(11,2) RC(12,2) RC(13,2) RC(14,2) RC(15,2) RC(16,2) RC(17,2)                           
+            RC(0,3) RC(1,3) RC(2,3) RC(3,3) RC(4,3) RC(5,3) RC(6,3) RC(7,3) RC(8,3) RC(9,3) RC(10,3) RC(11,3) RC(12,3) RC(13,3) RC(14,3) RC(15,3)          RC(17,3)                   RC(20,3)
+                    RC(1,4) RC(2,4) RC(3,4) RC(4,4) RC(5,4) RC(6,4) RC(7,4)                 RC(10,4)                                              RC(16,4) RC(17,4) RC(18,4) RC(19,4) RC(20,4) RC(21,4)
+    };
+	
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+
+        col-gpios
+            = <&pro_micro 38 GPIO_ACTIVE_HIGH> //COL17
+            , <&pro_micro 36 GPIO_ACTIVE_HIGH> //COL18
+            , <&pro_micro 34 GPIO_ACTIVE_HIGH> //COL19
+            , <&pro_micro 32 GPIO_ACTIVE_HIGH> //COL20
+            , <&pro_micro 28 GPIO_ACTIVE_HIGH> //COL0
+            , <&pro_micro 30 GPIO_ACTIVE_HIGH> //COL1
+            , <&pro_micro 22 GPIO_ACTIVE_HIGH> //COL2
+            , <&pro_micro 20 GPIO_ACTIVE_HIGH> //COL3
+            , <&pro_micro 18 GPIO_ACTIVE_HIGH> //COL4
+            , <&pro_micro 8 GPIO_ACTIVE_HIGH> //COL5
+            , <&pro_micro 16 GPIO_ACTIVE_HIGH> //COL6
+            , <&pro_micro 14 GPIO_ACTIVE_HIGH> //COL7
+            , <&pro_micro 12 GPIO_ACTIVE_HIGH> //COL8
+            , <&pro_micro 10 GPIO_ACTIVE_HIGH> //COL9
+            , <&pro_micro 9 GPIO_ACTIVE_HIGH> //COL10
+            , <&pro_micro 8 GPIO_ACTIVE_HIGH> //COL11
+            , <&pro_micro 7 GPIO_ACTIVE_HIGH> //COL12
+            , <&pro_micro 6 GPIO_ACTIVE_HIGH> //COL13
+            , <&pro_micro 4 GPIO_ACTIVE_HIGH> //COL14
+            , <&pro_micro 33 GPIO_ACTIVE_HIGH> //COL15
+            , <&pro_micro 42 GPIO_ACTIVE_HIGH> //COL16
+            ;
+
+        row-gpios
+            = <&pro_micro 43 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> //ROW0
+            , <&pro_micro 41 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> //ROW1
+            , <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  //ROW2
+            , <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  //ROW3
+            , <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  //ROW4
+            ;
+    };
+};
+
+&gpio0 {
+	status = "okay";
+};
+
+&gpio1 {
+	status = "okay";
+};
+
+&usbd {
+    status = "okay";
+};
+
+&pinctrl {
+       i2c0_default: i2c0_default {
+               group1 {
+                       psels = <NRF_PSEL(TWIM_SDA, 0, 5)>,
+                               <NRF_PSEL(TWIM_SCL, 1, 9)>;
+               };
+       };
+
+       i2c0_sleep: i2c0_sleep {
+               group1 {
+                       psels = <NRF_PSEL(TWIM_SDA, 0, 5)>,
+                               <NRF_PSEL(TWIM_SCL, 1, 9)>;
+                       low-power-enable;
+               };
+       };
+};
+
+&i2c0 {
+	status = "okay";
+	compatible = "nordic,nrf-twim";
+	pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
+	clock-frequency = <100000>;
+
+	fuelgauge: max17048@36 {
+		compatible = "zmk,maxim-max17048";
+		reg = <0x36>;
+	};
+};
+
+&flash0 {
+	/*
+	 * For more information, see:
+	 * http://docs.zephyrproject.org/latest/devices/dts/flash_partitions.html
+	 */
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		sd_partition: partition@0 {
+			label = "softdevice";
+			reg = <0x00000000 0x00026000>;
+		};
+		code_partition: partition@26000 {
+			label = "code_partition";
+			reg = <0x00026000 0x000c6000>;
+		};
+
+		/*
+		 * The flash starting at 0x000ec000 and ending at
+		 * 0x000f3fff is reserved for use by the application.
+		 */
+
+		/*
+		 * Storage partition will be used by FCB/LittleFS/NVS
+		 * if enabled.
+		 */
+		storage_partition: partition@ec000 {
+			label = "storage";
+			reg = <0x000ec000 0x00008000>;
+		};
+
+		boot_partition: partition@f4000 {
+			label = "adafruit_boot";
+			reg = <0x000f4000 0x0000c000>;
+		};
+	};
+};
