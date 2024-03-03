@@ -5,57 +5,217 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 / {
     keymap0: keymap {
         compatible = "zmk,keymap";
 
+        //Numpad Volume Control
 
+        htN9: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp C_VOL_DN>, <&kp KP_N9>;
+        }
 
-        //LAYER0
+        htN8: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp C_MUTE>, <&kp KP_N8>;
+        }
 
-        //----------------------------------------------------------------------------------------------------------------------------
-        //| - | * | / | ` |  | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP   |  | I | H | U |
-        //| + | 9 | 8 | 7 |  | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |    \    |  | D | E | D |
-        //| + | 6 | 5 | 4 |  | CAPS  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     ENTER    |   
-        //| E | 3 | 2 | 1 |  |  SHIFT  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |      SHIFT       |      | U |
-        //| T | . |   0   |  |  CTL  |  WIN  |  ALT  |            SPACE                  |  ALT   |   MO(1)  |  CTRL  |  | L | D | R |
-        //----------------------------------------------------------------------------------------------------------------------------
+        htN7: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp C_VOL_UP>, <&kp KP_N7>;
+        }
+
+        //Numpad Media Control
+
+        htN6: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp C_PREV>, <&kp KP_N6>;
+        }
+
+        htN5: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp C_PP>, <&kp KP_N5>;
+        }
+
+        htN4: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp C_NEXT>, <&kp KP_N4>;
+        }
+
+        //N <-> Fn Control
+
+        ht1: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp F1>, <&kp N1>;
+        }
+
+        ht2: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp F2>, <&kp N2>;
+        }
         
+        ht3: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp F3>, <&kp N3>;
+        }
 
+        ht4: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp F4>, <&kp N4>;
+        }
 
-        //LAYER1
+        ht5: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp F5>, <&kp F5>;
+        }
 
-        //----------------------------------------------------------------------------------------------------------------------------
-        //|   |   |   |CLR|  | ESC |  F1 |  F2 |  F3 |  F4 |  F5 |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |    DEL   |  |   |   |   |
-        //| BT|   |   |BT1|  | TAB  |     |  U  |     |     |     |     |     |     |     |     |     |     |         |  |   |   |   |
-        //| LD|   |   |BT2|  | CAPS  |  L  |  D  |  R  |     |     |     |     |     |     |     |     |     ENTER    |   
-        //| SY|   |   |BT3|  |  SHIFT  |     |     |     |     |     |     |     |     |     |     |      SHIFT       |      |   |
-        //| CL|   |       |  |  CTL  |  WIN  |  ALT  |            SPACE                  |  ALT   |          |  CTRL  |  |   |   |   |
-        //----------------------------------------------------------------------------------------------------------------------------
+        ht6: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp F6>, <&kp N6>;
+        }
 
+        ht7: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp F7>, <&kp N7>;
+        }
 
+        ht8: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp F8>, <&kp N8>;
+        }
 
-        default_layer {
+        ht9: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp F9>, <&kp N9>;
+        }
+
+        ht10: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp F10>, <&kp N0>;
+        }
+
+        ht11: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp F11>, <&kp MINUS>;
+        }
+
+        ht12: holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp F12>, <&kp EQUAL>;
+        }
+
+        layer0 {
+
+            //----------------------------------------------------------------------------------------------------------------------------
+            //| - | * | / | ` |  | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP   |  | I | H | U |
+            //| + | 9 | 8 | 7 |  | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |    \    |  | D | E | D |
+            //| + | 6 | 5 | 4 |  | CAPS  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     ENTER    |   
+            //| E | 3 | 2 | 1 |  |  SHIFT  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |      SHIFT       |      | U |
+            //| T | . |   0   |  |  CTL  |  WIN  |  ALT  |            SPACE                  |  ALT   |   MO(1)  |  CTRL  |  | L | D | R |
+            //----------------------------------------------------------------------------------------------------------------------------
+
             bindings = <
-                &kp MINUS    &kp STAR &kp FSLH &kp GRAVE        &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp   N8  &kp  N9 &kp  N0  &kp MINUS &kp EQUAL &kp BSPC        &kp INS   &kp HOME &kp PG_UP
-                &kp PLUS     &kp N9   &kp N8   &kp N7           &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp   I   &kp  O  &kp   P  &kp LBKT &kp RBKT  &kp BSLH        &kp DEL   &kp END  &kp PD_DN
-                             &kp N6   &kp N5   &kp N4           &lt 1 CLCK  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp   K   &kp  L  &kp SEMI &kp SQT           &kp RET
-                &kp ENTER    &kp N3   &kp N2   &kp N1           &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH         &kp RSHFT                          &kp UP
-                             &kp DOT           &kp N0           &kp LCTRL   &kp LGUI   &kp LALT                   &kp SPACE                 &kp  RALT    &kp RGUI     &kp  RCTRL        &kp LEFT  &kp DOWN &kp RIGHT
+                &kp KP_MINUS &kp KP_MULTIPLY  &kp KP_SLASH   &kp GRAVE           &ht1    &h2    &ht3    &ht3    &ht4    &ht5    &gt6    &ht7    &ht8    &ht9   &ht10    &ht11    &ht12    &kp BSPC       &kp INS   &kp HOME &kp PG_UP
+                &kp KP_PLUS  &htN9            &htN8          &htN7               &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp   I   &kp  O  &kp   P  &kp LBKT &kp RBKT   &kp BSLH       &kp DEL   &kp END  &kp PD_DN
+                             &htN6            &htN5          &htN4               &lt 1 CLCK  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp   K   &kp  L  &kp SEMI &kp SQT           &kp RET
+                &kp KP_ENTER &kp KP_N3        &kp KP_N2      &kp KP_N1           &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH         &kp RSHFT                          &kp UP
+                             &kp KP_DOT             &kp KP_N0                    &kp LCTRL   &kp LGUI   &kp LALT                   &kp SPACE                 &kp  RALT    &kp RGUI     &kp  RCTRL        &kp LEFT  &kp DOWN &kp RIGHT
             >;
         };
 
-        fn_layer {
+        layer1 {
+
+            //----------------------------------------------------------------------------------------------------------------------------
+            //|CLR|   |   |CAL|  | ESC |  F1 |  F2 |  F3 |  F4 |  F5 |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |    DEL   |  |   |   |   |
+            //| BT|   |   |BT1|  |PAUSE |     |  U  |     |     |     |     |     |     |     |     |     |     |         |  |   |   |   |
+            //| LD|   |   |BT2|  | CAPS  |  L  |  D  |  R  |     |     |     |     |     |     |     |     |     ENTER    |   
+            //| SY|   |   |BT3|  |  SHIFT  |     |     |     |     |     |     |     |     |     |     |      SHIFT       |      |   |
+            //| CL| BT|  USB  |  |  CTL  |  WIN  |  ALT  |            SPACE                  |  ALT   |          |  CTRL  |  |   |   |   |
+            //----------------------------------------------------------------------------------------------------------------------------
+
             bindings = <
-                &trans       &trans   &trans   &bt BT_CLR       &kp ESC &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp   F8  &kp  F9 &kp  F10 &kp  F11  &kp F12    &kp BSPC       &kp PSCRN &kp SLCK &kp PAUSE_BREAK
-                &bootloader  &trans   &trans   &bt BT_SEL 1     &kp TAB  &trans &kp UP  &trans &trans &trans &trans &trans &trans   &trans  &trans &trans     &trans     &trans         &trans    &trans   &trans   
-                             &trans   &trans   &bt BT_SEL 2     &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &trans &trans &trans &trans  &trans   &trans  &trans   &trans    &kp RET
-                &sys_reset   &trans   &trans   &kp BT_SEL 3     &kp LSHFT  &trans &trans &trans &trans &trans &trans &trans &trans   &trans  &trans           &kp RSHFT                           &trans  
-                             &trans         &trans              &kp LCTRL   &kp LGUI   &kp LALT                    &kp SPACE                  &kp  RALT    &kp RGUI     &kp  RCTRL      &trans    &trans   &trans
+                &bt BT_CLR   &none            &none          &K_CALC             &kp ESC &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp   F8  &kp  F9 &kp  F10 &kp  F11  &kp F12    &kp BSPC       &kp PSCRN &kp SLCK &kp PAUSE_BREAK
+                &bootloader  &none            &none          &bt BT_SEL 1        &kp C_PP &none  &kp UP  &none  &none  &none  &none  &none  &none    &none   &none  &none      &none      &none          &none     &none    &none    
+                             &none            &none          &bt BT_SEL 2        &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none  &none  &none   &none    &none   &none    &none     &kp RET
+                &sys_reset   &none            &none          &kp BT_SEL 3        &kp LSHFT  &none  &none  &none  &none  &none  &none  &none  &none    &none   &none            &kp RSHFT                           &trans  
+                             &out OUT_BLE          &out OUT_USB                  &kp LCTRL   &kp LGUI   &kp LALT                    &kp none                   &kp  RALT    &kp RGUI     &kp  RCTRL      &trans    &trans   &trans
             >;
         };
     };
