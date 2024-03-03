@@ -193,7 +193,7 @@
 
             bindings = <
                 &kp KP_MINUS &kp KP_MULTIPLY  &kp KP_SLASH   &kp GRAVE           &ht1    &h2    &ht3    &ht3    &ht4    &ht5    &gt6    &ht7    &ht8    &ht9   &ht10    &ht11    &ht12    &kp BSPC       &kp INS   &kp HOME &kp PG_UP
-                &kp KP_PLUS  &htN9            &htN8          &htN7               &kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T  &kp Y   &kp U  &kp I   &kp O  &kp P  &kp LBKT  &kp RBKT  &kp BSLH       &kp DEL   &kp END  &kp PD_DN
+                &kp KP_PLUS  &htN9 1          &htN8 1        &htN7 1             &kp TAB  &kp Q   &kp W   &kp E   &kp R   &kp T  &kp Y   &kp U  &kp I   &kp O  &kp P  &kp LBKT  &kp RBKT  &kp BSLH       &kp DEL   &kp END  &kp PD_DN
                              &htN6            &htN5          &htN4               &lt 1 CLCK  &kp A   &kp S   &kp D  &kp F   &kp G  &kp H  &kp J  &kp K   &kp L  &kp SEMI  &kp SQT          &kp RET
                 &kp KP_ENTER &kp KP_N3        &kp KP_N2      &kp KP_N1           &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH         &kp RSHFT                          &kp UP
                              &kp KP_DOT             &kp KP_N0                    &kp LCTRL   &kp LGUI   &kp LALT                   &kp SPACE                 &kp RALT     &kp RGUI        &kp RCTRL      &kp LEFT  &kp DOWN &kp RIGHT
