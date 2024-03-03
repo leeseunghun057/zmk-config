@@ -22,7 +22,7 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp C_VOL_DN>, <&kp KP_N9>;
-        }
+        };
 
         htN8: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -31,7 +31,7 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp C_MUTE>, <&kp KP_N8>;
-        }
+        };
 
         htN7: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -40,7 +40,7 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp C_VOL_UP>, <&kp KP_N7>;
-        }
+        };
 
         //Numpad Media Control
 
@@ -51,7 +51,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp C_PREV>, <&kp KP_N6>;
-        }
+        };
 
         htN5: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -60,7 +60,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp C_PP>, <&kp KP_N5>;
-        }
+        };
 
         htN4: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -69,7 +69,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp C_NEXT>, <&kp KP_N4>;
-        }
+        };
 
         //N <-> Fn Control
 
@@ -80,7 +80,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp F1>, <&kp N1>;
-        }
+        };
 
         ht2: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -89,7 +89,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp F2>, <&kp N2>;
-        }
+        };
         
         ht3: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -98,7 +98,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp F3>, <&kp N3>;
-        }
+        };
 
         ht4: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -107,7 +107,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp F4>, <&kp N4>;
-        }
+        };
 
         ht5: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -116,7 +116,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp F5>, <&kp F5>;
-        }
+        };
 
         ht6: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -125,7 +125,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp F6>, <&kp N6>;
-        }
+        };
 
         ht7: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -134,7 +134,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp F7>, <&kp N7>;
-        }
+        };
 
         ht8: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -143,7 +143,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp F8>, <&kp N8>;
-        }
+        };
 
         ht9: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -152,7 +152,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp F9>, <&kp N9>;
-        }
+        };
 
         ht10: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -161,7 +161,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp F10>, <&kp N0>;
-        }
+        };
 
         ht11: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -170,7 +170,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp F11>, <&kp MINUS>;
-        }
+        };
 
         ht12: holdtap {
             compatible = "zmk,behavior-hold-tap";
@@ -179,7 +179,7 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp F12>, <&kp EQUAL>;
-        }
+        };
 
         layer0 {
 
