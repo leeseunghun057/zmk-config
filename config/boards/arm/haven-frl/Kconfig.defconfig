@@ -31,4 +31,4 @@ config I2C
 config MAX17048
 	default y
 
-endif # BOARD_HAVEN-FRL
+endif # BOARD_HAVENFRL
