@@ -1,3 +1,0 @@
-config NRF_STORE_REBOOT_TYPE_GPREGRET
-    bool "NRF_STORE_REBOOT_TYPE_GPREGRET
-    default n
