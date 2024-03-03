@@ -15,7 +15,7 @@
 
         //Numpad Volume Control
 
-        htN9: holdtap {
+        htN9: holdtap_KPN9 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -24,7 +24,7 @@
             bindings = <&kp C_VOL_DN>, <&kp KP_N9>;
         };
 
-        htN8: holdtap {
+        htN8: holdtap_KPN8 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -33,7 +33,7 @@
             bindings = <&kp C_MUTE>, <&kp KP_N8>;
         };
 
-        htN7: holdtap {
+        htN7: holdtap_KPN7 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -44,7 +44,7 @@
 
         //Numpad Media Control
 
-        htN6: holdtap {
+        htN6: holdtap_KPN6 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -53,7 +53,7 @@
             bindings = <&kp C_PREV>, <&kp KP_N6>;
         };
 
-        htN5: holdtap {
+        htN5: holdtap_KPN5 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -62,7 +62,7 @@
             bindings = <&kp C_PP>, <&kp KP_N5>;
         };
 
-        htN4: holdtap {
+        htN4: holdtap_KPN4 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -73,7 +73,7 @@
 
         //N <-> Fn Control
 
-        ht1: holdtap {
+        ht1: holdtap_N1 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -82,7 +82,7 @@
             bindings = <&kp F1>, <&kp N1>;
         };
 
-        ht2: holdtap {
+        ht2: holdtap_N2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -91,7 +91,7 @@
             bindings = <&kp F2>, <&kp N2>;
         };
         
-        ht3: holdtap {
+        ht3: holdtap_N3 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -100,7 +100,7 @@
             bindings = <&kp F3>, <&kp N3>;
         };
 
-        ht4: holdtap {
+        ht4: holdtap_N4 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -109,7 +109,7 @@
             bindings = <&kp F4>, <&kp N4>;
         };
 
-        ht5: holdtap {
+        ht5: holdtap_N5 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -118,7 +118,7 @@
             bindings = <&kp F5>, <&kp F5>;
         };
 
-        ht6: holdtap {
+        ht6: holdtap_N6 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -127,7 +127,7 @@
             bindings = <&kp F6>, <&kp N6>;
         };
 
-        ht7: holdtap {
+        ht7: holdtap_N7 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -136,7 +136,7 @@
             bindings = <&kp F7>, <&kp N7>;
         };
 
-        ht8: holdtap {
+        ht8: holdtap_N8 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -145,7 +145,7 @@
             bindings = <&kp F8>, <&kp N8>;
         };
 
-        ht9: holdtap {
+        ht9: holdtap_N9 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -154,7 +154,7 @@
             bindings = <&kp F9>, <&kp N9>;
         };
 
-        ht10: holdtap {
+        ht10: holdtap_N10 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -163,7 +163,7 @@
             bindings = <&kp F10>, <&kp N0>;
         };
 
-        ht11: holdtap {
+        ht11: holdtap_Minus {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -172,7 +172,7 @@
             bindings = <&kp F11>, <&kp MINUS>;
         };
 
-        ht12: holdtap {
+        ht12: holdtap_Equal {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
