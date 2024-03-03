@@ -60,7 +60,7 @@
             //----------------------------------------------------------------------------------------------------------------------------
 
             bindings = <
-                &kp BT_CLR   &none                &none              &kp K_CALC               &kp ESC  &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    &kp F7     &kp F8    &kp F9    &kp F10    &kp F11       &kp F12       &kp BSPC       &kp PSCRN &kp SLCK &kp PAUSE_BREAK
+                &bt BT_CLR   &none                &none              &kp K_CALC               &kp ESC  &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    &kp F7     &kp F8    &kp F9    &kp F10    &kp F11       &kp F12       &kp BSPC       &kp PSCRN &kp SLCK &kp PAUSE_BREAK
                 &bootloader  &none                &none              &bt BT_SEL 1             &kp C_PP     &none     &kp UP     &none      &none     &none     &none     &none     &none     &none    &none    &none      &none       &none             &kp DEL   &kp END  &kp PG_DN
                              &none                &none              &bt BT_SEL 2             &trans         &kp LEFT   &kp DOWN    &kp RIGHT  &none     &none     &none     &none     &none      &none    &none        &none      &kp RET
                 &sys_reset   &none                &none              &bt BT_SEL 3             &kp LSHFT           &none       &none     &none     &none      &none      &none     &none    &none       &none       &none        &kp RSHFT                         &kp UP
